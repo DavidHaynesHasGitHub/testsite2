@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 	<script type="text/javascript">
+	<script type="text/javascript">
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,19 +13,20 @@
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
- -->
+
 	<meta charset="UTF-8">
 	<title>DAVIDS JANKY GOOGLE ANALYTICS TEST SITE</title>
 </head>
 <body>
 
-	<h1> Welcome to Davids Development Test Site</h1>
+	<h1> Welcome to Davids beautiful Google Analytics Test Site</h1>
 	<h3> Please click the iframe link and explore the portal, click some stuff, add and remove things from the cart and do transaction</h3>
 
-<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/spanish/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+<a href="https://athenswalkingtours.zaui.net/modules/webBooking/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">David @ Zaui Test</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://athenswalkingtours.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
 
-	<script>
-		function onSubmitForm(){
+
+		<script>
+		function onSubmitForm2(){
 
 			var clientId;
 
@@ -34,13 +35,13 @@
 	  		});
 	  		console.log('test', clientId);
 
-	  		var url = 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/spanish/index.php/?clientId=' + clientId;
+	  		var url = 'https://athenswalkingtours.zaui.net/modules/webBooking/index.php/?clientId=' + clientId;
 	  		document.ZauiLink.action = url;
 		}
 
 	</script>
 	<h3> Then do the same with the button</h3>
-	<form name="ZauiLink" onsubmit="return onSubmitForm()">
+	<form name="ZauiLink2" onsubmit="return onSubmitForm2()">
 		<input type="submit" value="Click Me">	
 	</form>	
 
