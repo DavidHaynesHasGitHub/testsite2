@@ -15,16 +15,20 @@
 	</script>
 
 	<meta charset="UTF-8">
-	<title>DAVIDS JANKY GOOGLE ANALYTICS TEST SITE</title>
+	<title>Zaui Basic GA Test Site</title>
 </head>
 <body>
 
-	<h1> Welcome to Davids beautiful Google Analytics Test Site</h1>
-	<h3> Please click the iframe link and explore the portal, click some stuff, add and remove things from the cart and do transaction</h3>
+	<h1> A basic iFrame Integration Test Site with Google Analytics Enabled</h1>
+	<h3> Please click the iframe link and explore the portal</h3>
 
 <a href="https://athenswalkingtours.zaui.net/modules/webBooking/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">David @ Zaui Test</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://athenswalkingtours.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
 
-
+<!-- 
+		this script is part of Zaui in its current version.
+		when the iFrame button is clicked it looks to see if there is an instance of Google ANalytics or a GA cookie and if there is
+		append the client id to the end of the url
+		then the GA code in the iframe looks for a URI parameter called clientId and if it exists it appends that value as the client id -->
 		<script>
 		function onSubmitForm2(){
 
@@ -36,17 +40,15 @@
 	  		console.log('test', clientId);
 
 	  		var url = 'https://athenswalkingtours.zaui.net/modules/webBooking/index.php/?clientId=' + clientId;
+	  		window.location.href = url
 	  		document.ZauiLink.action = url;
 		}
 
 	</script>
-	<h3> Then do the same with the button</h3>
-	<form name="ZauiLink2" onsubmit="return onSubmitForm2()">
-		<input type="submit" value="Click Me">	
-	</form>	
+	<h3> This is a deep link button to the portal</h3>
 
-	<h3>This is so I can make sur ethe GA code I have been working on is tracking properly on both iFrames and in a seperate tab as well as tracking user interacitons properly</h3>
-	<h1>Thanks</h1>
-	<h6>isnt this page beautiful! sorry Mika but i think we can see who is the better designer in the office</h6>
+	<input type="button" value="Click Me"onclick="onSubmitForm2();">
+
+
 </body>
 </html>
